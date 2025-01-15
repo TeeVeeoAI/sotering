@@ -1,0 +1,14 @@
+C:\Users\Admin\Documents\GitHub\sotering\bin\Debug\net8.0\sotering.exe
+C:\Users\Admin\Documents\GitHub\sotering\bin\Debug\net8.0\sotering.deps.json
+C:\Users\Admin\Documents\GitHub\sotering\bin\Debug\net8.0\sotering.runtimeconfig.json
+C:\Users\Admin\Documents\GitHub\sotering\bin\Debug\net8.0\sotering.dll
+C:\Users\Admin\Documents\GitHub\sotering\bin\Debug\net8.0\sotering.pdb
+C:\Users\Admin\Documents\GitHub\sotering\obj\Debug\net8.0\sotering.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\GitHub\sotering\obj\Debug\net8.0\sotering.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GitHub\sotering\obj\Debug\net8.0\sotering.AssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\sotering\obj\Debug\net8.0\sotering.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\sotering\obj\Debug\net8.0\sotering.dll
+C:\Users\Admin\Documents\GitHub\sotering\obj\Debug\net8.0\refint\sotering.dll
+C:\Users\Admin\Documents\GitHub\sotering\obj\Debug\net8.0\sotering.pdb
+C:\Users\Admin\Documents\GitHub\sotering\obj\Debug\net8.0\sotering.genruntimeconfig.cache
+C:\Users\Admin\Documents\GitHub\sotering\obj\Debug\net8.0\ref\sotering.dll

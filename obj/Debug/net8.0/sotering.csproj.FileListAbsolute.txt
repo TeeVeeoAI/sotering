@@ -12,3 +12,4 @@ C:\Users\Admin\Documents\GitHub\sotering\obj\Debug\net8.0\refint\sotering.dll
 C:\Users\Admin\Documents\GitHub\sotering\obj\Debug\net8.0\sotering.pdb
 C:\Users\Admin\Documents\GitHub\sotering\obj\Debug\net8.0\sotering.genruntimeconfig.cache
 C:\Users\Admin\Documents\GitHub\sotering\obj\Debug\net8.0\ref\sotering.dll
+C:\Users\Admin\Documents\GitHub\sotering\obj\Debug\net8.0\sotering.sourcelink.json

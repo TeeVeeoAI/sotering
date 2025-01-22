@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
 using System.Diagnostics;
 
 void BubbleSort(ref int[] arr){
@@ -33,42 +33,92 @@ void SelectionSort(ref int[] arr){
     }
 }
 
-void Merge(ref int[] arr, int p, int m, int r){
-    int[] b = new int[arr.Length];
+void Merge(int[] arr, int l, int m, int r)
+{
+    int n1 = m - l + 1;
+    int n2 = r - m;
 
-    int i = p;
-    int k = 0;
-    int j = m+1;
+    int[] L = new int[n1];
+    int[] R = new int[n2];
+    int i, j;
 
-    while (i <= m && j <= r){
-        if (arr[i] < arr[j]) {
-            b[k++] = arr[i++];
+    for (i = 0; i < n1; ++i)
+        L[i] = arr[l + i];
+    for (j = 0; j < n2; ++j)
+        R[j] = arr[m + 1 + j];
+
+    i = 0;
+    j = 0;
+
+    int k = l;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
         }
         else {
-            b[k++] = arr[j++];  
+            arr[k] = R[j];
+            j++;
         }
+        k++;
     }
 
-    while (i <= m){
-        b[k++] = arr[i++];
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
     }
 
-    while (j <= r){
-        b[k++] = arr[j++];
-    }
 
-    for (i = r; i >= p; i--)
-    {
-        arr[i] = b[--k];
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
     }
 }
 
-void MergSort(ref int[] arr, int p, int r){
-    if (arr[0] < arr[arr.Length-1]){
-        int m = (p + r) / 2;
 
-        MergSort(ref arr, p, m);
+void MergeSort(int[] arr, int l, int r)
+{
+    if (l < r) {
 
+        int m = l + (r - l) / 2;
+
+        MergeSort(arr, l, m);
+        MergeSort(arr, m + 1, r);
+
+        Merge(arr, l, m, r);
+    }
+}
+
+int Partition(int[] arr, int low, int high){
+    int pivot = arr[high];
+    int i = low-1;
+
+    for (int j = low; j <= high; j++){
+        if (arr[j] < pivot) {
+            i++;
+            Swap(arr, i, j);
+        }
+    }
+
+    Swap(arr, i+1, high);
+    return i + 1;
+}
+
+void Swap(int[] arr, int i, int j){
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}
+
+void QuickSort(int[] arr, int low, int high){
+    if (low < high) {
+
+        int pi = Partition(arr, low, high);
+
+        QuickSort(arr, low, pi-1);
+        QuickSort(arr, pi+1, high);
     }
 }
 
@@ -81,7 +131,7 @@ void Main(){
     }
 
     watch.Start();
-    BubbleSort(ref ints);
+    QuickSort(ints, 0, ints.Length-1);
     watch.Stop();
 
     foreach (int i in ints){
